@@ -17,6 +17,8 @@
 // 25  =>  true
 // 26  =>  false
 
+
+// My Solution
 var isSquare = function (n) {
   if (Math.sqrt(n) % 1 === 0) {
     return true
@@ -26,3 +28,13 @@ var isSquare = function (n) {
 }
 
 console.log(isSquare(14))
+
+
+// Alternative Solutions
+var isSquare2 = function(n){
+  return Number.isInteger(Math.sqrt(n))
+}
+
+function isSquare3(n) {
+  return Math.sqrt(n) % 1 === 0
+}
