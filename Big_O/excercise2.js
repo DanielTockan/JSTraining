@@ -16,4 +16,4 @@ function anotherFunChallenge(input) {
 }
 
 // BIG O = 4 + 7n
-// O(n)
+// Simplified - Big O(n)
