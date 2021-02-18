@@ -26,3 +26,13 @@ function logFirstTwoBoxes(boxes) {
 const boxes = [0,9,8,7,6,5]
 
 logFirstTwoBoxes(boxes)
+
+const findNemo2 = array => {
+  array.forEach(fish => {
+    if (fish === 'nemo') {
+      console.log('found ya')
+    }
+  })
+}
+
+console.log(findNemo2(['nemo','beans','nemo','nemo']))

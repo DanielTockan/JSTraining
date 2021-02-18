@@ -6,15 +6,14 @@ function booo(n) { // We only have control over what happens inside of the funct
   }
 }
 
-// booo([1,2,3,4,5]) // O(1)
+booo([1,2,3,4,5]) // O(1)
 
 
 function arrayofNTimes(n) {
-  const array = []
-  for (let i = 0; i < n; i++) {
+  const array = [] // have created a data structure O(n)
+  for (let i = 0; i < n; i++) { // create variable ,  n loops
     array[i] = 'hi'
   }
   return array
 }
-
-arrayofNTimes(6)
+console.log(arrayofNTimes(6));// O(n)
