@@ -47,6 +47,8 @@
 //   }
 //   return false
 // }
+// O(a*b) - Time complexity because it is a nested loop
+// O(1) - Space complexity as no new variables are created
 
 // const input1 = ['a','b','c','x']
 // const input2 = ['z', 'y', '55']
@@ -114,5 +116,32 @@ function commonLetter2(arr1, arr2) {
 }
 
 // O(a+b) rather than O(a*b)
+// O(a) space complexity as a new object (variable) is being created
+// which takes up memory
 
 console.log(commonLetter2(input1, input2));
+
+// ! 11th point -- Error checking
+// !
+// ! Start testing out scenarios that might potetnially break the code
+// ! and test them out
+// ! The key is to try and discover potential errors and point out 
+// ! potential fixes to these identified issues
+// ! Tell them what you would do
+
+
+// ! 12th point - variable names
+// !
+// ! See where I could have potentially used better names for my variables
+
+// ! 14th point - Where could I have improved
+// !
+// ! Say something like "If I had more time, I would have searched specific
+// ! array methods that could simplify this to make it more readable"
+
+// For example this could have been written much simpler using 
+// JS methods
+
+function containsLetter3(arr1,arr2) {
+  return arr1.some(item => arr2.includes(item))
+}
