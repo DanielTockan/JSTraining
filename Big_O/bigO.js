@@ -19,8 +19,8 @@ function findNem0(array) {
 // findNem0(large) // O (n) --> Linear Time
 
 function logFirstTwoBoxes(boxes) {
-  console.log(boxes[0]);
-  console.log(boxes[1]);
+  console.log(boxes[0]); // O(1)
+  console.log(boxes[1]); // O(2)
 }
 
 const boxes = [0,9,8,7,6,5]
