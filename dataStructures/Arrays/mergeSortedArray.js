@@ -1,36 +1,31 @@
-// Input: [0,3,4,31], [3,4,6,30]
-// Output: [0, 3, 4, 4, 6, 30, 31]
-
-// 2 arrays that are sorted
-// Merge them into one big one, still sorted
-
-// Input arrays have to be integers only?
-
-// What is the primary concern, time or space?
-
-// Brute force would a nested loop
-
 function mergeSortedArrays(array1, array2) {
+  const mergedArray = [];
+  let array1Item = array1[0];
+  let array2Item = array2[0];
+  let i = 1;
+  let j = 1;
 
-  for (let i = 0; i < array1.length; i++) {
+  //We should actually move these 2 if statements to line 2 so that we do the checks before we do assignments in line 3 and 4!
+  if (array1.length === 0) {
+    return array2;
+  }
+  if (array2.length === 0) {
+    return array1;
+  }
 
-    for (let j = 0; j < array2.length; j++) {
-
-      if (array1[i] <= array2[j]) {
-
-        array2.splice(j, 0, array1[i])
-
-      } else if (array1[i] > array2[j]) {
-        j++
-      } else {
-        array2.push(array1[i])
-      }
+  while (array1Item || array2Item) {
+    if (array2Item === undefined || array1Item < array2Item) {
+      mergedArray.push(array1Item);
+      array1Item = array1[i];
+      i++;
+    }
+    else {
+      mergedArray.push(array2Item);
+      array2Item = array2[j];
+      j++;
     }
   }
-  console.log(array2)
+  return mergedArray;
 }
 
-const arr1 = [0, 3, 4, 31]
-const arr2 = [3, 4, 6, 30]
-
-console.log(mergeSortedArrays(arr1, arr2))
+console.log(mergeSortedArrays([0, 3, 4, 31], [3, 4, 6, 30]))
