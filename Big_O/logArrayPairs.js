@@ -14,4 +14,4 @@ logAllPairsArray(boxes)
 
 // Where loops are nested, you use multiplication
 // O(n * n)
-// O(n^2) - quadratic time
+// O(n^2) - quadratic time 
